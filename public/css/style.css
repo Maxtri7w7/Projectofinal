@@ -1,0 +1,293 @@
+/* estilos comunes */
+* {
+
+    box-sizing: border-box; 
+    /* sirve para eliminar el margen de base que tienen los elementos y que estospixeles base no se tomen en cuenta a la hora de establecer la altura o ancho */
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+img{
+    border-radius: 5px;
+}
+
+
+/* estilos del encabezado */
+header{
+    padding: 80px;
+    text-align: center;
+    background-image: url(../img/backgroundheadershort.jpeg);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+}
+
+header div {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(112, 234, 255, 0.651);
+     background-image: linear-gradient(rgba(40, 67, 154, 0.502),rgba(50, 187, 255, 0.514));
+    /*por si se quiere hacer un degrade de colores */
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 800px) {
+    header {
+        background-position: center;
+    }
+}
+
+
+
+
+/* ESTILOS NAVBAR */
+.NAVBAR {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(141, 141, 253);
+    position: sticky;  
+    top: 0;
+    z-index: 1;
+    border-style: inset outset;
+    border-width: 5px;
+    border-color: rgb(54, 69, 163);
+}
+.NAVBAR a {
+    color: rgb(2, 9, 7);
+    padding: 15px;
+    text-decoration: none;
+
+    /*text-decoration: none; para quitar los estilos al texto (ancor la linea azul abajo)
+    position: sticky;  para que se posicione siemprevisible 
+    top:0 ubicacion en la pantalla (parte superior)*/
+}
+.NAVBAR a:hover{
+    background-color: rgb(54, 69, 163);
+}
+/* :hover se usa para que cuando seleccionamos ese objeto este tenga otras propiedades que no tiene el base como por ejemplo cambiar el color del fondo */
+@media (max-width: 800px) {
+    .NAVBAR{
+        flex-direction: column;
+        position: initial;
+    }
+    .NAVBAR a {
+        text-align: center;
+    }
+}
+
+
+
+
+/* ESTILO PARTE PRINCIPAL */
+.PRINCIPAL {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    flex-basis: 30%;
+  
+    padding: 10px;
+    background-color: rgba(24, 8, 116, 0.735);
+    text-align: center;
+
+}
+
+.imgaside img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+
+}
+.imgaside img:hover {
+    transform: scale(1.2); 
+}
+.CA {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    border: 3px solid;
+    background-image: linear-gradient(rgb(173, 85, 203), rgb(101, 101, 234));
+}
+.asidetitle {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+    .PRINCIPAL{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+/* main */
+main {
+    
+    flex-basis: 70%;
+    padding-left: 40px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(6, 35, 131, 0.718);
+    
+}
+main h2 {
+    margin-top: 10px;
+    color: aliceblue;
+    text-align: center;
+}
+main h5 {
+    margin-top: 10px;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+main p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+main img {
+    width:80%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(0.4);
+    transition: 0.7s all ease-in-out;
+    
+}
+main img:hover {
+    transform: scale(0.9);
+}
+@media (min-width:1500px) {
+    main img {
+        transform: none;
+        transition: none;
+        width: 90%;
+    }    
+    main img:hover {
+        transform: none;
+    }
+}
+@media (max-width:1200px) {
+    main img {
+        width: 100%;
+    }    
+}
+main video {
+    width:80%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(0.6);
+    transition: 0.7s all ease-in-out;
+    
+}
+main video:hover {
+    transform: scale(0.9);
+}
+@media (min-width:1500px) {
+    main video {
+        transform: none;
+        transition: none;
+        width: 90%;
+    }    
+    main video:hover {
+        transform: none;
+    }
+}
+@media (max-width:1200px) {
+    main video {
+        width: 100%;
+    }    
+}
+/* para mayor dinamismo a la hora de las imagenes con una pantalla chica */
+main .read-more{
+    background-color: rgb(125, 104, 223);
+    color: rgb(19, 19, 120);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin: auto;
+}
+main .read-more:hover {
+    transform: scale(1.08);
+    background-color: rgba(255, 0, 0, 0.645);
+    color: aliceblue;
+}
+
+main .see-more{
+    display: block;
+    background-color: rgba(118, 51, 241, 0.703);
+    color: rgb(46, 46, 174);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px ;
+    margin-top: 40px;
+    flex-basis: auto;
+}
+main .see-more:hover {
+    background-color: rgb(51, 133, 241);
+    color: aliceblue;
+}
+/* footer Tuki */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+}
+/* FORMULARIOS */
+form{
+    padding: 50px;
+    background-color: rgb(73, 93, 151);
+    color: rgb(1, 9, 35);
+    border: 5px solid cornflowerblue; 
+    text-align: center;
+
+    font-size: 2vw;
+    
+}
+
+fieldset{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    border:10px rgba(5, 5, 97, 0.563) solid;
+    margin-top: 2vh;
+}
+
+legend {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+label{
+
+    background-color:cornflowerblue; ;
+    color:rgb(1, 9, 35) ;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+input{
+    text-align: center;
+    background-color: rgb(127, 157, 255);
+    margin: 10px;
+    padding: 12px;
+    border-radius: 15px;
+}
+label,input{
+    font-size: 2vw;
+}
+input[type="submit"] {
+    background-color: rgb(191, 250, 202);
+}

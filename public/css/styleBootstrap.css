@@ -1,0 +1,22 @@
+/* Estilos Bootstrap */
+.cajaacomodadora {
+    display: block;
+    justify-items: center;
+    transform: scale(0.9);
+    
+}
+.carousel-inner {
+    border: inset  rgb(60, 0, 255);
+
+    justify-content:  center;
+}
+.card{
+    background-color: rgb(73, 73, 255);
+    
+}
+.card p {
+    color: aliceblue;
+}
+.card h5 {
+    color: aliceblue;
+}
